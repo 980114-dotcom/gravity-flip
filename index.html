@@ -151,7 +151,8 @@ const PLAYER_H = 32;
 const GRAVITY = 0.5;
 
 let state = 'menu';
-let score, lives, wave, enemies, particles, powerups, invincible, spawnTimer, spawnInterval, multiplier, multTimer, audioCtx;
+let score, lives, wave, invincible, spawnTimer, spawnInterval, multiplier, multTimer, audioCtx;
+let enemies = [], particles = [], powerups = [];
 
 const keys = {};
 let dashCooldown = 0;
