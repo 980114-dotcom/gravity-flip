@@ -468,8 +468,11 @@ function startGame() {
 document.getElementById('startBtn').addEventListener('click', startGame);
 document.addEventListener('keydown', e => {
   keys[e.key]=true;
-  if (e.code==='Space') { e.preventDefault(); flipGravity(); }
+  if (e.code==='ArrowUp'||e.code==='KeyW') { e.preventDefault(); flipGravity(); }
+  if (e.code==='ArrowDown'||e.code==='KeyS') { e.preventDefault(); flipGravity(); }
+  if (e.code==='Space') { e.preventDefault(); doDash(); }
   if (e.code==='ShiftLeft'||e.code==='ShiftRight') doDash();
+});
 });
 document.addEventListener('keyup', e => { keys[e.key]=false; });
 document.getElementById('btnFlip').addEventListener('click', flipGravity);
