@@ -474,7 +474,6 @@ document.addEventListener('keydown', e => {
   if (e.code==='Space') { e.preventDefault(); doDash(); }
   if (e.code==='ShiftLeft'||e.code==='ShiftRight') doDash();
 });
-});
 document.addEventListener('keyup', e => { keys[e.key]=false; });
 document.getElementById('btnFlip').addEventListener('click', flipGravity);
 document.getElementById('btnDash').addEventListener('click', doDash);
