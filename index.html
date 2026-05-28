@@ -380,7 +380,8 @@ function update() {
 
 function gameOver() {
   state = 'gameover';
-  overlay.innerHTML = `<h1 style="color:#f87171;font-size:38px">Game<br>Over</h1><p>SCORE &nbsp;<strong style="color:#a78bfa;opacity:1;font-size:18px">${score}</strong><br>WAVE &nbsp;<strong style="color:#a78bfa;opacity:1">${wave}</strong></p><button onclick="startGame()">PLAY AGAIN</button>`;
+overlay.innerHTML = `<h1 style="color:#f87171;font-size:38px">Game<br>Over</h1><p>SCORE &nbsp;<strong style="color:#a78bfa;opacity:1;font-size:18px">${score}</strong><br>WAVE &nbsp;<strong style="color:#a78bfa;opacity:1">${wave}</strong></p><button id="startBtn">PLAY AGAIN</button>`;
+overlay.querySelector('#startBtn').addEventListener('click', startGame);
   overlay.style.display = 'flex';
 }
 
